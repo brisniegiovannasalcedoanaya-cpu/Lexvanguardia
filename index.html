@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexVanguardia | Despacho de Asesoría Jurídica & Representación Legal</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="LexVanguardia es un despacho de abogados de excelencia en la Ciudad de México. Ofrecemos consultoría legal, revisión de contratos, representación legal y seguimiento de expedientes en línea de forma transparente.">
+    <meta name="keywords" content="abogados, asesoría jurídica, consulta legal, derecho civil, mercantil, penal, contratos, expedientes judiciales, despacho de abogados">
+    <meta name="author" content="LexVanguardia">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#f4f6fa',
+                            100: '#e6ebf3',
+                            500: '#1e3a60',
+                            800: '#112240',
+                            900: '#0a192f',
+                            950: '#050c16',
+                        },
+                        gold: {
+                            100: '#fdf6e2',
+                            400: '#f3d078',
+                            500: '#d4af37',
+                            600: '#b8942a',
+                            700: '#8c6d1c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para Iconografía Jurídica -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f3d078 0%, #d4af37 50%, #b8942a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border {
+            border-image: linear-gradient(to right, #d4af37, #f3d078, #b8942a) 1;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-navy-50 text-slate-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- Encabezado de la página (Navegación) -->
+    <header class="sticky top-0 z-50 bg-navy-950/95 backdrop-blur-md border-b border-navy-800/60 shadow-lg transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logotipo -->
+                <a href="#inicio" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-gold-400 to-gold-600 rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105">
+                        <i class="fa-solid fa-scale-balanced text-navy-950 text-xl"></i>
+                    </div>
+                    <span class="font-serif font-bold text-xl tracking-wider text-white">
+                        LEX<span class="gold-gradient-text font-sans font-light">VANGUARDIA</span>
+                    </span>
+                </a>
+
+                <!-- Navegación Escritorio -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#inicio" class="text-slate-300 hover:text-gold-400 text-sm font-medium tracking-wide transition-colors">Inicio</a>
+                    <a href="#nosotros" class="text-slate-300 hover:text-gold-400 text-sm font-medium tracking-wide transition-colors">Sobre Nosotros</a>
+                    <a href="#servicios" class="text-slate-300 hover:text-gold-400 text-sm font-medium tracking-wide transition-colors">Servicios</a>
+                    <a href="#proceso" class="text-slate-300 hover:text-gold-400 text-sm font-medium tracking-wide transition-colors">Proceso</a>
+                    <a href="#expediente" class="text-slate-300 hover:text-gold-400 text-sm font-medium tracking-wide transition-colors flex items-center gap-1.5">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-gold-500"></span>
+                        </span>
+                        Seguimiento
+                    </a>
+                    <a href="#preguntas" class="text-slate-300 hover:text-gold-400 text-sm font-medium tracking-wide transition-colors">FAQ</a>
+                    <a href="#contacto" class="text-slate-300 hover:text-gold-400 text-sm font-medium tracking-wide transition-colors">Contacto</a>
+                </nav>
+
+                <!-- CTA Escritorio -->
+                <div class="hidden lg:block">
+                    <a href="#consulta" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-navy-950 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 rounded-lg shadow-lg hover:shadow-gold-500/20 hover:scale-105 active:scale-95 transition-all duration-300">
+                        <i class="fa-solid fa-calendar-days mr-2"></i> Agenda tu consulta
+                    </a>
+                </div>
+
+                <!-- Botón de Menú Móvil -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2" aria-label="Abrir Menú">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-950 border-t border-navy-800 transition-all duration-300">
+            <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#inicio" class="block px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:bg-navy-900 hover:text-white transition-colors">Inicio</a>
+                <a href="#nosotros" class="block px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:bg-navy-900 hover:text-white transition-colors">Sobre Nosotros</a>
+                <a href="#servicios" class="block px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:bg-navy-900 hover:text-white transition-colors">Servicios</a>
+                <a href="#proceso" class="block px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:bg-navy-900 hover:text-white transition-colors">Proceso</a>
+                <a href="#expediente" class="block px-3 py-2.5 rounded-md text-base font-medium text-gold-400 hover:bg-navy-900 transition-colors">Seguimiento de Expediente</a>
+                <a href="#preguntas" class="block px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:bg-navy-900 hover:text-white transition-colors">FAQ</a>
+                <a href="#contacto" class="block px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:bg-navy-900 hover:text-white transition-colors">Contacto</a>
+                <div class="pt-4 pb-2 px-3">
+                    <a href="#consulta" class="w-full flex items-center justify-center px-4 py-3 text-base font-semibold text-navy-950 bg-gradient-to-r from-gold-400 to-gold-500 rounded-lg shadow-md">
+                        <i class="fa-solid fa-calendar-days mr-2"></i> Agenda tu consulta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal (Hero Section) -->
+    <section id="inicio" class="relative bg-navy-950 text-white min-h-[calc(100vh-80px)] flex items-center overflow-hidden">
+        <!-- Overlay decorativo -->
+        <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/90 to-transparent z-10"></div>
+        
+        <!-- Imagen de Fondo Principal -->
+        <div class="absolute inset-0 z-0 opacity-25">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1920" alt="Bufete de Abogados" class="w-full h-full object-cover object-center" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=1920';">
+        </div>
+
+        <!-- Elementos Geométricos de Fondo -->
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl z-0 transform translate-x-1/3 translate-y-1/3"></div>
+        <div class="absolute top-1/4 left-1/3 w-64 h-64 bg-navy-500/20 rounded-full blur-3xl z-0"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 z-20 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Columna Texto -->
+                <div class="lg:col-span-7 space-y-8 text-left">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-navy-900 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Excelencia, Ética e Innovación Legal</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                        Defendemos tus derechos con <br class="hidden sm:inline">
+                        <span class="gold-gradient-text">estrategia y firmeza</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-lg sm:text-xl max-w-2xl font-light leading-relaxed">
+                        En LexVanguardia unimos la experiencia tradicional del derecho con un enfoque vanguardista y tecnológico para ofrecerte soluciones jurídicas eficientes, transparentes y totalmente adaptadas a tus necesidades.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#consulta" class="flex items-center justify-center px-8 py-4 text-base font-bold text-navy-950 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 rounded-lg shadow-xl hover:shadow-gold-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200">
+                            Agendar mi Consulta <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#servicios" class="flex items-center justify-center px-8 py-4 text-base font-bold text-white border border-slate-700 hover:border-gold-500/50 hover:bg-navy-900 rounded-lg transition-all duration-200">
+                            Explorar Servicios
+                        </a>
+                    </div>
+
+                    <!-- Estadísticas -->
+                    <div class="grid grid-cols-3 gap-6 pt-10 border-t border-navy-800">
+                        <div>
+                            <div class="text-3xl font-bold text-white font-serif">+15 <span class="text-gold-500 text-2xl font-sans">Años</span></div>
+                            <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">De Experiencia</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-white font-serif">98%</div>
+                            <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Casos Exitosos</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-white font-serif">+1.2k</div>
+                            <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Clientes Satisfechos</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Widget / Tarjeta de Presentación Premium -->
+                <div class="lg:col-span-5 hidden lg:block">
+                    <div class="bg-navy-900/80 backdrop-blur-md border border-navy-800 p-8 rounded-2xl shadow-2xl relative overflow-hidden group">
+                        <div class="absolute -top-12 -right-12 w-24 h-24 bg-gold-500/10 rounded-full blur-xl group-hover:bg-gold-500/20 transition-all"></div>
+                        <h3 class="font-serif text-2xl text-white font-bold mb-4">¿Necesitas asesoría inmediata?</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Nuestro despacho cuenta con especialistas listos para analizar de forma preliminar tu caso de manera expedita. Agenda hoy mismo.
+                        </p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start space-x-3.5">
+                                <div class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-gold-400 flex-shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs text-slate-400 font-medium uppercase">Llamada Directa</h4>
+                                    <p class="text-white font-semibold text-sm">+52 (55) 8432-1090</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3.5">
+                                <div class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-gold-400 flex-shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs text-slate-400 font-medium uppercase">Correo Electrónico</h4>
+                                    <p class="text-white font-semibold text-sm">contacto@lexvanguardia.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3.5">
+                                <div class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-gold-400 flex-shrink-0">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs text-slate-400 font-medium uppercase">Atención en Oficina</h4>
+                                    <p class="text-white font-semibold text-sm">Lun - Vie: 9:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#expediente" class="block text-center py-3 px-4 bg-navy-800 border border-gold-500/20 hover:border-gold-500/50 hover:bg-navy-950 text-gold-400 rounded-lg text-sm font-semibold transition-all">
+                            <i class="fa-solid fa-folder-open mr-1.5"></i> Consultar estatus de expediente
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Sobre Nosotros (Misión, Visión, Valores) -->
+    <section id="nosotros" class="py-20 lg:py-28 bg-white text-navy-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+                <!-- Imagen Destacada con Marco -->
+                <div class="lg:col-span-5 relative">
+                    <div class="absolute -top-4 -left-4 w-full h-full border-2 border-gold-500 rounded-2xl z-0 transform -translate-x-2 translate-y-2"></div>
+                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=800" alt="Reunión de Abogados" class="w-full h-[450px] object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1505664194779-8bebcb95c539?auto=format&fit=crop&q=80&w=800';">
+                    </div>
+                </div>
+
+                <!-- Contenido Corporativo -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div>
+                        <span class="text-gold-600 font-semibold tracking-wider uppercase text-sm block mb-2">Sobre LexVanguardia</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                            La experiencia nos respalda, la <span class="text-gold-600 italic">ética nos define</span>
+                        </h2>
+                        <div class="w-20 h-1 bg-gold-500 mt-4"></div>
+                    </div>
+
+                    <p class="text-slate-600 text-lg leading-relaxed font-light">
+                        Somos un bufete de asesoría jurídica integral fundado sobre el principio de la verdad objetiva y la justicia pragmática. Entendemos que cada cliente enfrenta desafíos únicos, por lo que adaptamos rigurosamente nuestra estrategia para maximizar las probabilidades de éxito legal.
+                    </p>
+
+                    <!-- Pestañas Interactivas (Misión, Visión, Valores) -->
+                    <div class="bg-navy-50 p-6 rounded-2xl border border-slate-100">
+                        <div class="flex border-b border-slate-200 overflow-x-auto pb-px">
+                            <button onclick="switchTab('mision')" id="btn-mision" class="tab-btn py-2.5 px-4 font-semibold text-sm border-b-2 border-gold-500 text-navy-950 transition-all whitespace-nowrap focus:outline-none">
+                                <i class="fa-solid fa-bullseye mr-2"></i> Misión
+                            </button>
+                            <button onclick="switchTab('vision')" id="btn-vision" class="tab-btn py-2.5 px-4 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-navy-950 transition-all whitespace-nowrap focus:outline-none">
+                                <i class="fa-solid fa-eye mr-2"></i> Visión
+                            </button>
+                            <button onclick="switchTab('valores')" id="btn-valores" class="tab-btn py-2.5 px-4 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-navy-950 transition-all whitespace-nowrap focus:outline-none">
+                                <i class="fa-solid fa-star mr-2"></i> Valores
+                            </button>
+                        </div>
+
+                        <!-- Contenido Pestaña: Misión -->
+                        <div id="content-mision" class="tab-content py-5 text-slate-600 space-y-2 animate-fade-in">
+                            <p class="font-light leading-relaxed">
+                                Proveer representación y asesoramiento legal preventivo y correctivo con los más altos estándares de excelencia, logrando soluciones reales que brinden absoluta tranquilidad y seguridad patrimonial a personas físicas y morales.
+                            </p>
+                        </div>
+
+                        <!-- Contenido Pestaña: Visión -->
+                        <div id="content-vision" class="tab-content py-5 text-slate-600 space-y-2 hidden animate-fade-in">
+                            <p class="font-light leading-relaxed">
+                                Ser reconocidos como la firma jurídica líder del sector, pionera en la digitalización de procesos de seguimiento procesal y en el desarrollo de metodologías ágiles de consultoría, consolidándonos como sinónimo de confianza absoluta.
+                            </p>
+                        </div>
+
+                        <!-- Contenido Pestaña: Valores -->
+                        <div id="content-valores" class="tab-content py-5 text-slate-600 hidden animate-fade-in">
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <li class="flex items-center space-x-2 text-sm text-navy-950 font-medium">
+                                    <i class="fa-solid fa-gavel text-gold-500 text-xs"></i>
+                                    <span>Honestidad procesal inquebrantable</span>
+                                </li>
+                                <li class="flex items-center space-x-2 text-sm text-navy-950 font-medium">
+                                    <i class="fa-solid fa-gavel text-gold-500 text-xs"></i>
+                                    <span>Confidencialidad rigurosa</span>
+                                </li>
+                                <li class="flex items-center space-x-2 text-sm text-navy-950 font-medium">
+                                    <i class="fa-solid fa-gavel text-gold-500 text-xs"></i>
+                                    <span>Transparencia en honorarios</span>
+                                </li>
+                                <li class="flex items-center space-x-2 text-sm text-navy-950 font-medium">
+                                    <i class="fa-solid fa-gavel text-gold-500 text-xs"></i>
+                                    <span>Lealtad absoluta al cliente</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Servicios -->
+    <section id="servicios" class="py-20 lg:py-28 bg-navy-950 text-white relative">
+        <div class="absolute inset-0 z-0 bg-gradient-to-b from-navy-950 to-navy-900"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+            
+            <!-- Encabezado de la Sección -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold-400 font-semibold tracking-wider uppercase text-sm block">Especialidades de Práctica</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold">Portafolio de Servicios Jurídicos</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto"></div>
+                <p class="text-slate-300 font-light max-w-xl mx-auto text-base">
+                    Asesoría proactiva y defensas robustas diseñadas por especialistas en cada rama del derecho moderno.
+                </p>
+            </div>
+
+            <!-- Grid de Servicios -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Servicio 1: Consultoría Jurídica -->
+                <div class="bg-navy-900 border border-navy-800 p-8 rounded-2xl hover:border-gold-500/40 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
+                            <i class="fa-solid fa-scale-unbalanced-flip"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-400 transition-colors">Consultoría Jurídica Integral</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed font-light">
+                            Diagnóstico profundo, preventivo y estratégico de cualquier situación legal o litigio inminente. Minimiza riesgos antes de tomar decisiones importantes.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-navy-800 mt-6 flex justify-between items-center text-xs">
+                        <span class="text-gold-400 font-semibold">PARTICULARES Y EMPRESAS</span>
+                        <a href="#consulta" class="text-white hover:text-gold-400 font-semibold transition-colors">Solicitar <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: Redacción de Contratos -->
+                <div class="bg-navy-900 border border-navy-800 p-8 rounded-2xl hover:border-gold-500/40 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-400 transition-colors">Elaboración y Revisión de Contratos</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed font-light">
+                            Diseño a la medida de convenios de confidencialidad, compraventas, arrendamientos y actas constitutivas con blindaje judicial absoluto.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-navy-800 mt-6 flex justify-between items-center text-xs">
+                        <span class="text-gold-400 font-semibold">BLINDAJE CONTRACTUAL</span>
+                        <a href="#consulta" class="text-white hover:text-gold-400 font-semibold transition-colors">Solicitar <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Servicio 3: Representación Procesal -->
+                <div class="bg-navy-900 border border-navy-800 p-8 rounded-2xl hover:border-gold-500/40 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
+                            <i class="fa-solid fa-gavel"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-400 transition-colors">Litigio y Representación Legal</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed font-light">
+                            Defensa de tus derechos ante tribunales civiles, familiares, de trabajo y mercantiles. Litigantes comprometidos dedicados enteramente a tu causa.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-navy-800 mt-6 flex justify-between items-center text-xs">
+                        <span class="text-gold-400 font-semibold">DEFENSA EN TRIBUNALES</span>
+                        <a href="#consulta" class="text-white hover:text-gold-400 font-semibold transition-colors">Solicitar <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Servicio 4: Corporativo y Compliance -->
+                <div class="bg-navy-900 border border-navy-800 p-8 rounded-2xl hover:border-gold-500/40 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
+                            <i class="fa-solid fa-building-shield"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-400 transition-colors">Asesoría Corporativa</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed font-light">
+                            Constitución de sociedades, gobierno corporativo, marcas, auditorías de riesgo y cumplimiento normativo integral (compliance penal y laboral).
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-navy-800 mt-6 flex justify-between items-center text-xs">
+                        <span class="text-gold-400 font-semibold">MUNDO EMPRESARIAL</span>
+                        <a href="#consulta" class="text-white hover:text-gold-400 font-semibold transition-colors">Solicitar <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Servicio 5: Derecho Laboral -->
+                <div class="bg-navy-900 border border-navy-800 p-8 rounded-2xl hover:border-gold-500/40 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-400 transition-colors">Asuntos Laborales</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed font-light">
+                            Especialistas en liquidaciones laborales equitativas, rescisiones con justificación contractual, convenios internos e intermediación legal.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-navy-800 mt-6 flex justify-between items-center text-xs">
+                        <span class="text-gold-400 font-semibold">PATRÓN Y TRABAJADOR</span>
+                        <a href="#consulta" class="text-white hover:text-gold-400 font-semibold transition-colors">Solicitar <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Servicio 6: Sucesiones y Testamentos -->
+                <div class="bg-navy-900 border border-navy-800 p-8 rounded-2xl hover:border-gold-500/40 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 flex items-center justify-center text-xl group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
+                            <i class="fa-solid fa-house-chimney-crack"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-400 transition-colors">Sucesiones y Testamentos</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed font-light">
+                            Planificación testamentaria preventiva, juicios sucesorios intestamentarios y mediaciones familiares enfocadas en proteger tu unión y patrimonio.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-navy-800 mt-6 flex justify-between items-center text-xs">
+                        <span class="text-gold-400 font-semibold">ESTRUCTURA FAMILIAR</span>
+                        <a href="#consulta" class="text-white hover:text-gold-400 font-semibold transition-colors">Solicitar <i class="fa-solid fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Proceso de Atención -->
+    <section id="proceso" class="py-20 lg:py-28 bg-white text-navy-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Encabezado de la Sección -->
+            <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                <span class="text-gold-600 font-semibold tracking-wider uppercase text-sm block">¿Cómo trabajamos?</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold">Nuestro Proceso de Atención</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto"></div>
+                <p class="text-slate-600 font-light max-w-xl mx-auto text-base">
+                    Garantizamos un acompañamiento profesional, transparente y sin tecnicismos complejos desde el primer día.
+                </p>
+            </div>
+
+            <!-- Timeline Alternante -->
+            <div class="relative">
+                <!-- Línea Central -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-navy-100 hidden md:block"></div>
+
+                <div class="space-y-16">
+                    <!-- Paso 1: Diagnóstico Inicial -->
+                    <div class="flex flex-col md:flex-row items-center md:justify-between relative">
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-gold-500 border-4 border-white shadow flex items-center justify-center text-navy-950 font-bold z-10 hidden md:flex">1</div>
+                        
+                        <div class="w-full md:w-5/12 bg-navy-50 border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                            <span class="text-gold-600 text-xs font-bold uppercase tracking-wider block mb-2">Paso 01</span>
+                            <h3 class="font-serif text-xl font-bold text-navy-950 mb-3">Diagnóstico Inicial</h3>
+                            <p class="text-slate-600 text-sm font-light leading-relaxed">
+                                Agendas tu consulta en línea o por teléfono. Nos reunimos vía remota o presencial en nuestras oficinas para escuchar detalladamente los pormenores de tu situación jurídica.
+                            </p>
+                        </div>
+                        <div class="w-full md:w-5/12 mt-6 md:mt-0 px-8 text-center md:text-left">
+                            <div class="text-8xl font-serif text-navy-100 font-bold hidden md:block">01</div>
+                        </div>
+                    </div>
+
+                    <!-- Paso 2: Diseño Estratégico -->
+                    <div class="flex flex-col md:flex-row-reverse items-center md:justify-between relative">
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-navy-950 border-4 border-white shadow flex items-center justify-center text-gold-400 font-bold z-10 hidden md:flex">2</div>
+                        
+                        <div class="w-full md:w-5/12 bg-navy-50 border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                            <span class="text-gold-600 text-xs font-bold uppercase tracking-wider block mb-2">Paso 02</span>
+                            <h3 class="font-serif text-xl font-bold text-navy-950 mb-3">Diseño Estratégico y Presupuesto</h3>
+                            <p class="text-slate-600 text-sm font-light leading-relaxed">
+                                Te presentamos una propuesta de acción detallada con alternativas de viabilidad y un presupuesto claro de honorarios, transparente y garantizado, sin cargos sorpresa.
+                            </p>
+                        </div>
+                        <div class="w-full md:w-5/12 mt-6 md:mt-0 px-8 text-center md:text-right">
+                            <div class="text-8xl font-serif text-navy-100 font-bold hidden md:block">02</div>
+                        </div>
+                    </div>
+
+                    <!-- Paso 3: Ejecución -->
+                    <div class="flex flex-col md:flex-row items-center md:justify-between relative">
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-gold-500 border-4 border-white shadow flex items-center justify-center text-navy-950 font-bold z-10 hidden md:flex">3</div>
+                        
+                        <div class="w-full md:w-5/12 bg-navy-50 border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                            <span class="text-gold-600 text-xs font-bold uppercase tracking-wider block mb-2">Paso 03</span>
+                            <h3 class="font-serif text-xl font-bold text-navy-950 mb-3">Ejecución y Defensa Activa</h3>
+                            <p class="text-slate-600 text-sm font-light leading-relaxed">
+                                Redactamos demandas, contestamos recursos judiciales, iniciamos negociaciones conciliatorias o comparecemos ante autoridades. Tu caso avanza respaldado por profesionales.
+                            </p>
+                        </div>
+                        <div class="w-full md:w-5/12 mt-6 md:mt-0 px-8 text-center md:text-left">
+                            <div class="text-8xl font-serif text-navy-100 font-bold hidden md:block">03</div>
+                        </div>
+                    </div>
+
+                    <!-- Paso 4: Monitoreo Digital -->
+                    <div class="flex flex-col md:flex-row-reverse items-center md:justify-between relative">
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-navy-950 border-4 border-white shadow flex items-center justify-center text-gold-400 font-bold z-10 hidden md:flex">4</div>
+                        
+                        <div class="w-full md:w-5/12 bg-navy-50 border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                            <span class="text-gold-600 text-xs font-bold uppercase tracking-wider block mb-2">Paso 04</span>
+                            <h3 class="font-serif text-xl font-bold text-navy-950 mb-3">Seguimiento Digital Transparente</h3>
+                            <p class="text-slate-600 text-sm font-light leading-relaxed">
+                                Podrás revisar las 24 horas del día la evolución de tu expediente y notificaciones de acuerdos desde nuestro exclusivo portal de consulta con tu folio asignado.
+                            </p>
+                        </div>
+                        <div class="w-full md:w-5/12 mt-6 md:mt-0 px-8 text-center md:text-right">
+                            <div class="text-8xl font-serif text-navy-100 font-bold hidden md:block">04</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Consulta de Expediente -->
+    <section id="expediente" class="py-20 lg:py-28 bg-gradient-to-r from-navy-900 to-navy-950 text-white relative">
+        <div class="absolute inset-0 bg-gold-500/5 mix-blend-color-dodge pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Encabezado de la Sección -->
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-4">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 bg-navy-800 border border-gold-500/30 text-gold-400 text-xs font-bold uppercase rounded-md">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Portal Seguro de Clientes</span>
+                </div>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold">Consulta de Expediente Digital</h2>
+                <p class="text-slate-300 font-light text-sm">
+                    Introduce el número de expediente proporcionado por tu asesor para visualizar de manera instantánea el estado, resoluciones y próximas fechas de audiencia de tu juicio.
+                </p>
+            </div>
+
+            <!-- Interfaz del Tracker -->
+            <div class="bg-navy-900/90 border border-navy-800 rounded-2xl shadow-2xl p-6 sm:p-10">
+                <div class="max-w-md mx-auto space-y-6">
+                    <div>
+                        <label for="exp-number" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                            Número de Folio / Expediente
+                        </label>
+                        <div class="relative flex">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-500">
+                                <i class="fa-solid fa-folder-open"></i>
+                            </span>
+                            <input type="text" id="exp-number" placeholder="Ej. EXP-2026-089 o EXP-2026-102" class="w-full pl-10 pr-24 py-3 bg-navy-950 border border-navy-800 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 transition-colors uppercase font-mono tracking-wider">
+                            <button onclick="buscarExpediente()" class="absolute right-1.5 inset-y-1.5 px-4 bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-500 hover:to-gold-600 text-navy-950 rounded-md font-semibold text-xs uppercase tracking-wide transition-all shadow-md active:scale-95">
+                                Buscar
+                            </button>
+                        </div>
+                        <p class="text-[11px] text-slate-400 mt-2 italic">
+                            * Folios de prueba para demostración: <strong class="text-gold-400 font-mono">EXP-2026-089</strong>, <strong class="text-gold-400 font-mono">EXP-2026-102</strong>, <strong class="text-gold-400 font-mono">EXP-2026-115</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Resultados del Expediente (Render dinámico con JS) -->
+                <div id="tracker-result" class="hidden mt-10 pt-10 border-t border-navy-800 space-y-8 animate-fade-in">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 bg-navy-950/60 p-4 rounded-xl border border-navy-800 text-center sm:text-left">
+                        <div>
+                            <span class="block text-[10px] text-slate-400 uppercase font-semibold">Cliente</span>
+                            <span id="tracker-cliente" class="text-sm font-semibold text-white">---</span>
+                        </div>
+                        <div>
+                            <span class="block text-[10px] text-slate-400 uppercase font-semibold">Materia de Juicio</span>
+                            <span id="tracker-materia" class="text-sm font-semibold text-white">---</span>
+                        </div>
+                        <div>
+                            <span class="block text-[10px] text-slate-400 uppercase font-semibold">Última Actualización</span>
+                            <span id="tracker-fecha" class="text-sm font-semibold text-white">---</span>
+                        </div>
+                        <div>
+                            <span class="block text-[10px] text-slate-400 uppercase font-semibold">Estatus</span>
+                            <span id="tracker-estatus" class="inline-block px-2.5 py-0.5 rounded text-xs font-bold mt-1">---</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-navy-950/40 p-5 rounded-xl border border-navy-800">
+                        <h4 class="text-sm font-bold text-gold-400 uppercase tracking-wider mb-2">Comentarios del Asesor Judicial</h4>
+                        <p id="tracker-detalles" class="text-slate-300 text-sm leading-relaxed font-light">---</p>
+                    </div>
+
+                    <!-- Timeline de Progreso de Juicio -->
+                    <div>
+                        <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-6 text-center sm:text-left">Flujo de Etapas Procesales</h4>
+                        <div class="relative flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-4">
+                            <!-- Conector de barra para pantallas medianas -->
+                            <div class="absolute left-1/2 md:left-0 md:top-5 md:w-full h-full md:h-0.5 bg-navy-800 -translate-x-1/2 md:translate-x-0 z-0"></div>
+                            
+                            <!-- Barra de progreso dinámica -->
+                            <div id="tracker-progress-bar" class="absolute left-1/2 md:left-0 md:top-5 h-0 md:h-0.5 bg-gradient-to-r from-gold-500 to-green-500 -translate-x-1/2 md:translate-x-0 z-0 transition-all duration-1000"></div>
+
+                            <!-- Paso A: Análisis -->
+                            <div class="relative z-10 flex flex-col items-center bg-navy-900 md:bg-transparent p-4 md:p-0 rounded-lg w-full md:w-auto">
+                                <div id="step-1-icon" class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-all duration-300">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <span class="text-xs font-semibold text-white mt-2">1. Diagnóstico</span>
+                                <span class="text-[10px] text-slate-400">Completado</span>
+                            </div>
+
+                            <!-- Paso B: Presentación -->
+                            <div class="relative z-10 flex flex-col items-center bg-navy-900 md:bg-transparent p-4 md:p-0 rounded-lg w-full md:w-auto">
+                                <div id="step-2-icon" class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-all duration-300">
+                                    <i class="fa-solid fa-gavel"></i>
+                                </div>
+                                <span class="text-xs font-semibold text-white mt-2">2. Demanda / Litigio</span>
+                                <span id="step-2-status" class="text-[10px]">Pendiente</span>
+                            </div>
+
+                            <!-- Paso C: Desahogo de pruebas -->
+                            <div class="relative z-10 flex flex-col items-center bg-navy-900 md:bg-transparent p-4 md:p-0 rounded-lg w-full md:w-auto">
+                                <div id="step-3-icon" class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-all duration-300">
+                                    <i class="fa-solid fa-hourglass-half"></i>
+                                </div>
+                                <span class="text-xs font-semibold text-white mt-2">3. Desahogo / Pruebas</span>
+                                <span id="step-3-status" class="text-[10px]">Pendiente</span>
+                            </div>
+
+                            <!-- Paso D: Resolución -->
+                            <div class="relative z-10 flex flex-col items-center bg-navy-900 md:bg-transparent p-4 md:p-0 rounded-lg w-full md:w-auto">
+                                <div id="step-4-icon" class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-all duration-300">
+                                    <i class="fa-solid fa-certificate"></i>
+                                </div>
+                                <span class="text-xs font-semibold text-white mt-2">4. Sentencia / Resolución</span>
+                                <span id="step-4-status" class="text-[10px]">Pendiente</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mensaje de no encontrado o error -->
+                <div id="tracker-error" class="hidden mt-6 bg-red-950/60 border border-red-800 p-4 rounded-xl text-center text-sm text-red-200">
+                    <i class="fa-solid fa-triangle-exclamation mr-2"></i> No se encontró ningún expediente con el número ingresado. Asegúrate de escribirlo correctamente respetando el formato (Ej: <span class="font-mono">EXP-2026-089</span>).
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Agendar Consulta -->
+    <section id="consulta" class="py-20 lg:py-28 bg-white text-navy-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
+                
+                <!-- Columna Informativa de Agendamiento -->
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <span class="text-gold-600 font-semibold tracking-wider uppercase text-sm block">Consulta Estratégica</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold">Reserva una Reunión con un Especialista</h2>
+                        <div class="w-16 h-1 bg-gold-500"></div>
+                        <p class="text-slate-600 font-light leading-relaxed">
+                            No postergues la resolución de tu problema jurídico. Una intervención a tiempo puede ser el factor decisivo entre la protección de tu patrimonio o la pérdida de un derecho fundamental.
+                        </p>
+                        
+                        <div class="space-y-4 pt-4">
+                            <div class="flex items-center space-x-3 text-sm text-slate-600">
+                                <i class="fa-solid fa-circle-check text-gold-500"></i>
+                                <span>100% de Confidencialidad Asegurada</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-sm text-slate-600">
+                                <i class="fa-solid fa-circle-check text-gold-500"></i>
+                                <span>Reuniones presenciales o vía videoconferencia</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-sm text-slate-600">
+                                <i class="fa-solid fa-circle-check text-gold-500"></i>
+                                <span>Respuesta de asignación en menos de 12 horas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sello de Confianza Extra -->
+                    <div class="mt-8 lg:mt-0 p-5 bg-navy-50 rounded-2xl border border-slate-100 flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-navy-950 text-gold-400 flex items-center justify-center text-xl flex-shrink-0">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-navy-950">Cumplimiento y Privacidad Absoluta</h4>
+                            <p class="text-[11px] text-slate-500">Tus datos personales y detalles del caso están legalmente protegidos por el secreto profesional del ejercicio de la abogacía.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Formulario -->
+                <div class="lg:col-span-7">
+                    <div class="bg-navy-50 border border-slate-100 p-8 sm:p-10 rounded-3xl shadow-xl relative">
+                        <!-- Éxito Modal de Envío de Citas (Controlado por JS) -->
+                        <div id="booking-success" class="absolute inset-0 bg-navy-900 text-white rounded-3xl flex flex-col items-center justify-center p-8 text-center z-30 transition-all duration-300 opacity-0 pointer-events-none">
+                            <div class="w-16 h-16 bg-gradient-to-r from-gold-400 to-gold-500 text-navy-950 rounded-full flex items-center justify-center text-3xl mb-6 shadow-lg animate-bounce">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold mb-2 text-white">¡Consulta Pre-Agendada con Éxito!</h3>
+                            <p class="text-slate-300 text-sm max-w-sm mx-auto mb-6">
+                                Hemos recibido tus datos y la descripción de tu caso. Un abogado especialista de guardia se comunicará de inmediato para confirmar el horario.
+                            </p>
+                            <div class="bg-navy-950 border border-navy-800 p-4 rounded-xl text-left w-full max-w-sm mb-6 space-y-2 font-mono text-xs text-gold-400">
+                                <div><span class="text-slate-400 font-sans">Folio Cita:</span> <span id="res-folio">---</span></div>
+                                <div><span class="text-slate-400 font-sans">Contacto:</span> <span id="res-tel">---</span></div>
+                                <div><span class="text-slate-400 font-sans">Asunto:</span> <span id="res-tipo">---</span></div>
+                            </div>
+                            <button onclick="resetBookingForm()" class="px-6 py-2.5 bg-navy-800 text-slate-200 border border-navy-700 hover:border-gold-500 hover:text-white rounded-lg text-xs font-semibold uppercase tracking-wider transition-all">
+                                Agendar otra consulta
+                            </button>
+                        </div>
+
+                        <!-- Formulario HTML -->
+                        <form id="appointment-form" onsubmit="procesarAgenda(event)" class="space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="form-name" class="block text-xs font-semibold uppercase tracking-wider text-navy-800 mb-2">Nombre Completo *</label>
+                                    <input type="text" id="form-name" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-navy-950 placeholder-slate-400 focus:outline-none focus:border-gold-500 text-sm transition-colors">
+                                </div>
+                                <div>
+                                    <label for="form-phone" class="block text-xs font-semibold uppercase tracking-wider text-navy-800 mb-2">Teléfono de Contacto *</label>
+                                    <input type="tel" id="form-phone" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-navy-950 placeholder-slate-400 focus:outline-none focus:border-gold-500 text-sm transition-colors">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="form-email" class="block text-xs font-semibold uppercase tracking-wider text-navy-800 mb-2">Correo Electrónico *</label>
+                                    <input type="email" id="form-email" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-navy-950 placeholder-slate-400 focus:outline-none focus:border-gold-500 text-sm transition-colors">
+                                </div>
+                                <div>
+                                    <label for="form-service" class="block text-xs font-semibold uppercase tracking-wider text-navy-800 mb-2">Tipo de Servicio Requerido</label>
+                                    <select id="form-service" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-navy-950 focus:outline-none focus:border-gold-500 text-sm transition-colors">
+                                        <option value="Consultoría General">Consultoría General</option>
+                                        <option value="Revisión de Contratos">Elaboración / Revisión Contrato</option>
+                                        <option value="Representación Procesal">Representación / Litigio</option>
+                                        <option value="Sucesión / Herencia">Sucesiones y Testamentos</option>
+                                        <option value="Asunto Corporativo">Derecho Corporativo / Marcas</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="form-message" class="block text-xs font-semibold uppercase tracking-wider text-navy-800 mb-2">Breve descripción de su situación legal *</label>
+                                <textarea id="form-message" rows="4" required placeholder="Proporcione detalles para asignarle al especialista idóneo." class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-navy-950 placeholder-slate-400 focus:outline-none focus:border-gold-500 text-sm transition-colors resize-none"></textarea>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="form-terms" type="checkbox" required class="h-4 w-4 text-gold-500 focus:ring-gold-500 border-slate-300 rounded">
+                                </div>
+                                <div class="ml-3 text-xs leading-relaxed">
+                                    <label for="form-terms" class="text-slate-500">He leído y acepto el <a href="#contacto" class="text-gold-600 font-semibold hover:underline">Aviso de Privacidad</a> y consiento el tratamiento confidencial de mis datos.</label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 bg-gradient-to-r from-navy-900 to-navy-950 hover:from-navy-950 hover:to-black text-white rounded-lg text-sm font-semibold uppercase tracking-wider transition-all duration-200 shadow-md flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-paper-plane text-xs"></i>
+                                <span>Enviar Solicitud de Cita</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Testimonios -->
+    <section class="py-20 lg:py-28 bg-navy-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Encabezado -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold-400 font-semibold tracking-wider uppercase text-sm block">Testimonios Reales</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold">La Opinión de Quienes Confían en Nosotros</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto"></div>
+            </div>
+
+            <!-- Grid de Testimonios -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Testimonio 1 -->
+                <div class="bg-navy-950/60 border border-navy-800 p-8 rounded-2xl flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex text-gold-500 space-x-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 font-light text-sm italic leading-relaxed">
+                            "Lograron solucionar un conflicto de herencia que llevaba estancado en tribunales más de 3 años. Lo mejor fue poder monitorear el expediente semanalmente desde la plataforma. Excelente servicio."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-6 border-t border-navy-800 mt-6">
+                        <div class="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center font-bold text-sm text-gold-400">AM</div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-white">Alejandro Mendoza</h4>
+                            <p class="text-[10px] text-slate-400">Asunto Sucesorio Familiar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-navy-950/60 border border-navy-800 p-8 rounded-2xl flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex text-gold-500 space-x-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 font-light text-sm italic leading-relaxed">
+                            "Como constructora, requerimos blindaje contractual de nivel excepcional. LexVanguardia redactó todos nuestros contratos de obra y el esquema de proveedores. Profesionalismo de primer nivel."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-6 border-t border-navy-800 mt-6">
+                        <div class="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center font-bold text-sm text-gold-400">SG</div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-white">Silvia Gutiérrez</h4>
+                            <p class="text-[10px] text-slate-400">Directora General de Constructora G&C</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-navy-950/60 border border-navy-800 p-8 rounded-2xl flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex text-gold-500 space-x-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 font-light text-sm italic leading-relaxed">
+                            "Excelente disposición telefónica. Tuve una consulta de urgencia corporativa en fin de semana y me asignaron de inmediato a un litigante de guardia. Sin duda los recomiendo ampliamente."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-6 border-t border-navy-800 mt-6">
+                        <div class="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center font-bold text-sm text-gold-400">RC</div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-white">Roberto Camargo</h4>
+                            <p class="text-[10px] text-slate-400">Consulta de Emergencia</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Preguntas Frecuentes (FAQ) -->
+    <section id="preguntas" class="py-20 lg:py-28 bg-white text-navy-950 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Encabezado de la Sección -->
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-gold-600 font-semibold tracking-wider uppercase text-sm block">Resolviendo inquietudes</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold">Preguntas Frecuentes</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto"></div>
+                <p class="text-slate-600 font-light text-sm">
+                    Queremos que te sientas plenamente seguro y en control de tu proceso. Aquí aclaramos algunas de las dudas más recurrentes.
+                </p>
+            </div>
+
+            <!-- Accordion Group -->
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 bg-white">
+                    <button onclick="toggleAccordion(1)" class="w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-navy-950 hover:bg-slate-50 transition-colors focus:outline-none">
+                        <span>¿Cuál es el costo inicial de la primera consulta de diagnóstico?</span>
+                        <i id="faq-icon-1" class="fa-solid fa-plus text-xs text-gold-600 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-1" class="max-h-0 overflow-hidden transition-all duration-300 bg-navy-50/40">
+                        <p class="px-6 py-5 text-sm text-slate-600 leading-relaxed font-light">
+                            Nuestra primera consulta de diagnóstico tiene una cuota de recuperación que se bonifica íntegramente al 100% en caso de formalizar la contratación de cualquiera de los servicios legales propuestos por nuestro despacho.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 bg-white">
+                    <button onclick="toggleAccordion(2)" class="w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-navy-950 hover:bg-slate-50 transition-colors focus:outline-none">
+                        <span>¿Cómo funciona el portal de seguimiento de expedientes?</span>
+                        <i id="faq-icon-2" class="fa-solid fa-plus text-xs text-gold-600 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-2" class="max-h-0 overflow-hidden transition-all duration-300 bg-navy-50/40">
+                        <p class="px-6 py-5 text-sm text-slate-600 leading-relaxed font-light">
+                            Al iniciar tu proceso, se te asignará un asesor titular y un folio único. Con este número podrás ingresar a la sección de seguimiento en esta página web para ver de manera segura todas las novedades y acuerdos procesales en tiempo real.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 bg-white">
+                    <button onclick="toggleAccordion(3)" class="w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-navy-950 hover:bg-slate-50 transition-colors focus:outline-none">
+                        <span>¿Manejan esquemas de pago o financiamiento procesal?</span>
+                        <i id="faq-icon-3" class="fa-solid fa-plus text-xs text-gold-600 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-3" class="max-h-0 overflow-hidden transition-all duration-300 bg-navy-50/40">
+                        <p class="px-6 py-5 text-sm text-slate-600 leading-relaxed font-light">
+                            Sí. Creemos en la justicia accesible. Dependiendo del tipo de asunto judicial y de la viabilidad de la defensa, ofrecemos cómodas mensualidades fijas y esquemas basados en el éxito procesal del caso.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 bg-white">
+                    <button onclick="toggleAccordion(4)" class="w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-navy-950 hover:bg-slate-50 transition-colors focus:outline-none">
+                        <span>¿Mis datos e información confidencial están verdaderamente a salvo?</span>
+                        <i id="faq-icon-4" class="fa-solid fa-plus text-xs text-gold-600 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-4" class="max-h-0 overflow-hidden transition-all duration-300 bg-navy-50/40">
+                        <p class="px-6 py-5 text-sm text-slate-600 leading-relaxed font-light">
+                            Totalmente. El secreto profesional rige todas nuestras interacciones desde el segundo en que se contacta con nosotros. Nuestro sitio web implementa estrictas medidas de seguridad informática para asegurar el resguardo confidencial de sus datos.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Contacto e Información -->
+    <section id="contacto" class="py-20 lg:py-28 bg-navy-50 text-navy-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+                
+                <!-- Datos Directos -->
+                <div class="lg:col-span-5 space-y-8 flex flex-col justify-between">
+                    <div>
+                        <span class="text-gold-600 font-semibold tracking-wider uppercase text-sm block mb-2">Canales de Atención</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold">¿Dónde Encontrarnos?</h2>
+                        <div class="w-16 h-1 bg-gold-500 mt-4"></div>
+                        <p class="text-slate-600 text-sm font-light leading-relaxed mt-6">
+                            Ven a conocernos y platicar personalmente sobre tu expediente en un entorno corporativo confidencial, cómodo y seguro.
+                        </p>
+                    </div>
+
+                    <!-- Lista Informativa -->
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-navy-950 text-gold-400 flex items-center justify-center text-sm flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-slate-500 uppercase font-semibold">Oficina Central Ciudad de México</h4>
+                                <p class="text-slate-800 text-sm font-semibold mt-0.5">Av. Paseo de la Reforma 222, Piso 12, Juárez, Cuauhtémoc, CDMX, 06600.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-navy-950 text-gold-400 flex items-center justify-center text-sm flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-slate-500 uppercase font-semibold">Teléfonos Directos</h4>
+                                <p class="text-slate-800 text-sm font-semibold mt-0.5">+52 (55) 8432-1090 <br>+52 (55) 8432-1095</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-navy-950 text-gold-400 flex items-center justify-center text-sm flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-slate-500 uppercase font-semibold">Buzón Informativo CDMX</h4>
+                                <p class="text-slate-800 text-sm font-semibold mt-0.5">atencion@lexvanguardia.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Horario -->
+                    <div class="p-5 bg-white rounded-2xl border border-slate-200">
+                        <h4 class="text-xs text-navy-950 font-bold uppercase mb-2">Horarios de Oficina</h4>
+                        <div class="grid grid-cols-2 gap-4 text-xs">
+                            <div>
+                                <span class="text-slate-500">Lunes a Viernes</span>
+                                <p class="text-navy-950 font-semibold mt-0.5">9:00 AM - 6:00 PM</p>
+                            </div>
+                            <div>
+                                <span class="text-slate-500">Sábados (Previo Acuerdo)</span>
+                                <p class="text-navy-950 font-semibold mt-0.5">10:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Iframe Mapa -->
+                <div class="lg:col-span-7">
+                    <div class="w-full h-full min-h-[350px] rounded-3xl overflow-hidden border border-slate-200 shadow-xl relative bg-slate-200">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.66173004868!2d-99.16431942542568!3d19.4270220818985!2m3!1f0!2f0!3f0!3m2!1i1020!2i768!4f13.1!3m3!1m2!1s0x85d1ff49576c66cf%3A0xe53d0bc44c9fb2f2!2sPaseo%20de%20la%20Reforma%20222%2C%20Ju%C3%A1rez%2C%20Cuauht%C3%A9moc%2C%2006600%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1715012345678!5m2!1ses-419!2smx" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="absolute inset-0 w-full h-full">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="bg-navy-950 text-slate-400 py-16 border-t border-navy-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                
+                <!-- Columna Empresa -->
+                <div class="space-y-6">
+                    <a href="#inicio" class="flex items-center space-x-3 group">
+                        <div class="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-gold-400 to-gold-600 rounded-lg shadow-md">
+                            <i class="fa-solid fa-scale-balanced text-navy-950 text-xl"></i>
+                        </div>
+                        <span class="font-serif font-bold text-xl tracking-wider text-white">
+                            LEX<span class="gold-gradient-text font-sans font-light">VANGUARDIA</span>
+                        </span>
+                    </a>
+                    <p class="text-sm font-light leading-relaxed">
+                        Despacho de asesoría legal comprometido con la defensa de los intereses patrimoniales y civiles de nuestros representados.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com" target="_blank" class="w-9 h-9 rounded-full bg-navy-900 border border-navy-800 hover:border-gold-500 hover:text-white flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="w-9 h-9 rounded-full bg-navy-900 border border-navy-800 hover:border-gold-500 hover:text-white flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-x-twitter text-sm"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="w-9 h-9 rounded-full bg-navy-900 border border-navy-800 hover:border-gold-500 hover:text-white flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Accesos Rápidos -->
+                <div>
+                    <h4 class="font-serif text-white font-bold text-lg mb-6">Nuestra Firma</h4>
+                    <ul class="space-y-3.5 text-sm">
+                        <li><a href="#nosotros" class="hover:text-gold-400 transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="#servicios" class="hover:text-gold-400 transition-colors">Portafolio de Servicios</a></li>
+                        <li><a href="#proceso" class="hover:text-gold-400 transition-colors">Proceso de Trabajo</a></li>
+                        <li><a href="#expediente" class="hover:text-gold-400 transition-colors">Seguimiento de Expediente</a></li>
+                        <li><a href="#consulta" class="hover:text-gold-400 transition-colors">Agendar Cita en Línea</a></li>
+                    </ul>
+                </div>
+
+                <!-- Especialidades -->
+                <div>
+                    <h4 class="font-serif text-white font-bold text-lg mb-6">Especialidades</h4>
+                    <ul class="space-y-3.5 text-sm">
+                        <li><a href="#servicios" class="hover:text-gold-400 transition-colors">Derecho Civil y Sucesiones</a></li>
+                        <li><a href="#servicios" class="hover:text-gold-400 transition-colors">Derecho Corporativo y Marcas</a></li>
+                        <li><a href="#servicios" class="hover:text-gold-400 transition-colors">Blindaje Contractual</a></li>
+                        <li><a href="#servicios" class="hover:text-gold-400 transition-colors">Litigio en General</a></li>
+                    </ul>
+                </div>
+
+                <!-- Boletín Informativo -->
+                <div class="space-y-4">
+                    <h4 class="font-serif text-white font-bold text-lg mb-6">Boletín Preventivo</h4>
+                    <p class="text-xs font-light leading-relaxed">
+                        Recibe periódicamente consejos de prevención legal directa en tu buzón de correo.
+                    </p>
+                    <div class="relative flex">
+                        <input type="email" placeholder="Tu correo" class="w-full px-3.5 py-2.5 bg-navy-900 border border-navy-800 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 text-xs">
+                        <button class="absolute right-1 inset-y-1 px-3 bg-gold-500 hover:bg-gold-600 text-navy-950 rounded-md font-semibold text-xs transition-all">
+                            Unirme
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-navy-900 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-light">
+                <div>
+                    © 2026 LexVanguardia. Todos los derechos reservados.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#contacto" class="hover:text-gold-400 transition-colors">Aviso de Privacidad</a>
+                    <a href="#contacto" class="hover:text-gold-400 transition-colors">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de Asesoría por WhatsApp Flotante -->
+    <a href="https://wa.me/525584321090" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center text-2xl shadow-xl hover:bg-green-600 hover:scale-110 active:scale-95 transition-all" aria-label="Contacto por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Lógica de Control JavaScript -->
+    <script>
+        // Control de Menú Móvil
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')){
+                menuIcon.className = 'fa-solid fa-bars text-2xl';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark text-2xl';
+            }
+        });
+
+        // Alternar entre las pestañas Misión/Visión/Valores
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('border-gold-500', 'text-navy-950');
+                btn.classList.add('border-transparent', 'text-slate-500');
+            });
+
+            document.getElementById(`content-${tabId}`).classList.remove('hidden');
+            
+            const activeBtn = document.getElementById(`btn-${tabId}`);
+            activeBtn.classList.remove('border-transparent', 'text-slate-500');
+            activeBtn.classList.add('border-gold-500', 'text-navy-950');
+        }
+
+        // Controladores para el Acordeón FAQ
+        function toggleAccordion(faqIndex) {
+            const content = document.getElementById(`faq-content-${faqIndex}`);
+            const icon = document.getElementById(`faq-icon-${faqIndex}`);
+            
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                icon.className = 'fa-solid fa-plus text-xs text-gold-600 transition-transform duration-300';
+            } else {
+                for(let i=1; i<=4; i++){
+                    const otherContent = document.getElementById(`faq-content-${i}`);
+                    const otherIcon = document.getElementById(`faq-icon-${i}`);
+                    if(otherContent){
+                        otherContent.style.maxHeight = '0px';
+                        otherIcon.className = 'fa-solid fa-plus text-xs text-gold-600 transition-transform duration-300';
+                    }
+                }
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.className = 'fa-solid fa-minus text-xs text-gold-600 transition-transform duration-300';
+            }
+        }
+
+        // --- SISTEMA DEL RASTREADOR DE EXPEDIENTES ---
+        const MOCK_CASES = {
+            "EXP-2026-089": {
+                cliente: "Corporación de Alimentos S.A.",
+                materia: "Derecho Mercantil (Marcas)",
+                fecha: "10 de Julio, 2026",
+                estatus: "En Desahogo",
+                badgeClass: "bg-amber-500 text-navy-950",
+                detalles: "Se ingresó formalmente la contestación respecto a la oposición de marca de terceros. La autoridad judicial fijó la fecha de pruebas para el próximo 22 de Septiembre de 2026. Se sugiere a los directivos firmar el poder legal correspondiente.",
+                etapa: 3 
+            },
+            "EXP-2026-102": {
+                cliente: "Sra. María Elena Ramos",
+                materia: "Derecho Civil (Sucesión)",
+                fecha: "05 de Julio, 2026",
+                estatus: "Sentencia Favorable",
+                badgeClass: "bg-green-600 text-white",
+                detalles: "La jueza del Juzgado Segundo de lo Familiar ha resuelto en favor de nuestra representada respecto a la adjudicación de bienes intestamentarios. Los trámites notariales ya están en curso formal.",
+                etapa: 4 
+            },
+            "EXP-2026-115": {
+                cliente: "Sr. Carlos Mendoza Ortiz",
+                materia: "Derecho Civil (Arrendamiento)",
+                fecha: "08 de Julio, 2026",
+                estatus: "Demanda Admitida",
+                badgeClass: "bg-blue-600 text-white",
+                detalles: "Hemos culminado el diagnóstico y el emplazamiento legal fue notificado al demandado de manera satisfactoria. Cuenta con un término de 9 días hábiles para dar contestación.",
+                etapa: 2 
+            }
+        };
+
+        // Escuchar tecla Enter en el input de expediente
+        document.getElementById('exp-number').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                buscarExpediente();
+            }
+        });
+
+        function buscarExpediente() {
+            const inputVal = document.getElementById('exp-number').value.trim().toUpperCase();
+            const resultDiv = document.getElementById('tracker-result');
+            const errorDiv = document.getElementById('tracker-error');
+
+            if (MOCK_CASES[inputVal]) {
+                const caso = MOCK_CASES[inputVal];
+                errorDiv.classList.add('hidden');
+                resultDiv.classList.remove('hidden');
+
+                document.getElementById('tracker-cliente').textContent = caso.cliente;
+                document.getElementById('tracker-materia').textContent = caso.materia;
+                document.getElementById('tracker-fecha').textContent = caso.fecha;
+                
+                const badge = document.getElementById('tracker-estatus');
+                badge.textContent = caso.estatus;
+                badge.className = `inline-block px-2.5 py-0.5 rounded text-xs font-bold mt-1 ${caso.badgeClass}`;
+                
+                document.getElementById('tracker-detalles').textContent = caso.detalles;
+
+                actualizarBarraProcesal(caso.etapa);
+                resultDiv.classList.add('animate-fade-in');
+            } else {
+                resultDiv.classList.add('hidden');
+                errorDiv.classList.remove('hidden');
+            }
+        }
+
+        function actualizarBarraProcesal(etapa) {
+            const steps = [1, 2, 3, 4];
+            
+            steps.forEach(step => {
+                const icon = document.getElementById(`step-${step}-icon`);
+                const label = document.getElementById(`step-${step}-status`);
+                
+                if (step < etapa) {
+                    icon.className = "w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm bg-green-600 border-2 border-green-600 text-white transition-all";
+                    if (label) label.textContent = "Completado";
+                } else if (step === etapa) {
+                    icon.className = "w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm bg-gold-500 border-2 border-gold-500 text-navy-950 transition-all shadow-md scale-110";
+                    if (label) label.textContent = "En Progreso";
+                } else {
+                    icon.className = "w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm bg-navy-900 border-2 border-slate-700 text-slate-500 transition-all";
+                    if (label) label.textContent = "Pendiente";
+                }
+            });
+
+            // Ajustar dinámicamente la barra de progreso
+            const progressBar = document.getElementById('tracker-progress-bar');
+            let percentage = 0;
+            if(etapa === 1) percentage = 12.5;
+            if(etapa === 2) percentage = 37.5;
+            if(etapa === 3) percentage = 62.5;
+            if(etapa === 4) percentage = 100;
+
+            if (window.innerWidth >= 768) {
+                progressBar.style.width = percentage + "%";
+                progressBar.style.height = "0.125rem";
+            } else {
+                progressBar.style.width = "0.125rem";
+                progressBar.style.height = percentage + "%";
+            }
+        }
+
+        // --- SISTEMA DEL FORMULARIO DE CITAS ---
+        function procesarAgenda(event) {
+            event.preventDefault();
+
+            const phone = document.getElementById('form-phone').value;
+            const service = document.getElementById('form-service').value;
+            const randomFolio = "CIT-2026-" + Math.floor(1000 + Math.random() * 9000);
+
+            document.getElementById('res-folio').textContent = randomFolio;
+            document.getElementById('res-tel').textContent = phone;
+            document.getElementById('res-tipo').textContent = service;
+
+            const successOverlay = document.getElementById('booking-success');
+            successOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            successOverlay.classList.add('opacity-100', 'pointer-events-auto');
+        }
+
+        function resetBookingForm() {
+            document.getElementById('appointment-form').reset();
+            const successOverlay = document.getElementById('booking-success');
+            successOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+            successOverlay.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        // Redimensionamiento de pantalla (ajuste de la barra de progreso procesal)
+        window.addEventListener('resize', () => {
+            const resultDiv = document.getElementById('tracker-result');
+            if (!resultDiv.classList.contains('hidden')) {
+                const expVal = document.getElementById('exp-number').value.trim().toUpperCase();
+                if (MOCK_CASES[expVal]) {
+                    actualizarBarraProcesal(MOCK_CASES[expVal].etapa);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
